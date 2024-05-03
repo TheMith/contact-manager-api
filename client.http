@@ -1,0 +1,39 @@
+### Listar pessoas
+GET http://localhost:3000/pessoas
+
+### Criar pessoas
+POST http://localhost:3000/pessoas
+Content-Type: application/json
+
+{
+    "name": "Estevam Vicente",
+    "age": 19,
+    "email": "ecvf2004@gmail.com",
+    "cellphone": "933340748"
+}
+
+### Listar os detalhes de uma pessoa
+GET http://localhost:3000/pessoas/16352cc2-4a99-4683-b116-c3a21ab5a42d
+
+### Atualizar uma pessoa
+PUT http://localhost:3000/pessoas/16352cc2-4a99-4683-b116-c3a21ab5a42d
+Content-Type: application/json
+
+{
+    "name": "Bruno Neto",
+    "age": 19,
+    "email": "bruno@gmail.com",
+    "cellphone": "933340749"
+}
+
+### Remover uma pessoa
+DELETE http://localhost:3000/pessoas/16352cc2-4a99-4683-b116-c3a21ab5a42d
+
+### Adicionar contatos a uma pessoa existente
+POST http://localhost:3000/pessoas/cf9f7b4f-4390-4361-b7de-254d2d3454b6/contacts
+Content-Type: application/json
+
+{
+    "email": "estevam@gmail.com",
+    "cellphone": "123456789"
+}
